@@ -8,9 +8,16 @@
 
 import UIKit
 
-class ViewController: UIViewController{
+class WelcomeVC: UIViewController{
     @IBOutlet weak var swoosh: UIImageView!
     @IBOutlet weak var bgimg: UIImageView!
+    
+    @IBAction func onGetStTapped(_ sender: Any) {
+    performSegue(withIdentifier: "LeagueVCSegue", sender: self)
+    
+    }
+   
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,8 +26,10 @@ class ViewController: UIViewController{
         bgimg.frame = view.frame;
     }
 
-    @IBAction func unwindFromSkillVC(unwindSegue: UIStoryboardSegue) {
-        
+    
+    
+    
+    @IBAction func unwindFromLeagueVC(unwindSegue: UIStoryboardSegue) {
         
     }
     
